@@ -1,5 +1,5 @@
 import Banner from './components/Banner/index';
-import Aboutus from './components/Aboutus/index';
+// import Aboutus from './components/Aboutus/index';
 import Dedicated from './components/Dedicated/index';
 import Digital from './components/Digital/index';
 import Beliefs from './components/Beliefs/index';
@@ -18,19 +18,19 @@ export default function Home() {
   return (
     <main>
       <Banner />
-      <Aboutus />
+      {/* <Aboutus /> */}
       <Dedicated />
-      <Digital />
-      <Beliefs />
-      <Wework />
-      <Ourteam />
-      {/* <Featured /> */}
-      <Manage />
-      <FAQ />
+      {/* <Digital />
+      <Beliefs /> */}
+      {/* <Wework />
+      <Ourteam /> */}
+      <Featured />
+      {/* <Manage /> */}
+      {/* <FAQ />
       <Testimonials />
-      <Articles />
+      <Articles /> */}
       <Joinus />
-      <Insta />
+      {/* <Insta /> */}
     </main>
   )
 }

@@ -1,7 +1,8 @@
 "use client"
+import React from 'react';
+import { useRouter, usePathname } from 'next/navigation'
 import { Disclosure } from '@headlessui/react';
 import Link from 'next/link';
-import React from 'react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
@@ -14,7 +15,7 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-    { name: 'About Us', href: '#aboutus-section', current: false },
+    { name: 'About Us', href: '/about', current: false },
     { name: 'Services', href: '#services-section', current: false },
     { name: 'FAQ', href: '#faq-section', current: false },
     { name: 'Blog', href: '#blog-section', current: false },
@@ -26,6 +27,8 @@ function classNames(...classes: string[]) {
 }
 
 const Navbar = () => {
+    const router = useRouter()
+    const pathname = usePathname();
 
     const [isOpen, setIsOpen] = React.useState(false);
 
@@ -38,29 +41,37 @@ const Navbar = () => {
 
                             {/* LOGO */}
 
-                            <div className="flex flex-shrink-0 items-center border-right">
+                            <div className="flex flex-shrink-0 items-center">
                                 <Link href="/" className='text-2xl sm:text-4xl font-semibold text-black'>
-                                    Desgy Solutions
+                                    Okoh International
                                 </Link>
                             </div>
 
                             {/* LINKS */}
 
-                            <div className="hidden lg:flex items-center border-right ">
-                                <div className="flex justify-end space-x-4">
-                                    {navigation.map((item) => (
+                            <div className="hidden lg:flex items-center">
+                                <div className="">
+                                    <ul className="flex justify-end space-x-4">
+                                        <li className={pathname == "/" ? "text-green-300 hover:text-green-300 transition delay-150 duration-300" : ""}><Link href={"/"}>Home</Link></li>
+                                        <li className={pathname == "/about" ? "text-green-300 hover:text-green-300 transition delay-150 duration-300" : ""}><Link href={"/about"}>About Us</Link></li>
+                                        <li className={pathname == "/services" ? "text-green-300 hover:text-green-300 transition delay-150 duration-300" : ""}><Link href={"/about"}>Services</Link></li>
+                                        <li className={pathname == "/products" ? "text-green-300 hover:text-green-300 transition delay-150 duration-300" : ""}><Link href={"/about"}>Our Products</Link></li>
+                                        <li className={pathname == "/blog" ? "text-green-300 hover:text-green-300 transition delay-150 duration-300" : ""}><Link href={"/about"}>Blog</Link></li>
+                                    </ul>
+                                    {/* {navigation.map((link) => (
                                         <Link
-                                            key={item.name}
-                                            href={item.href}
+                                            key={link.name}
+                                            href={link.href}
                                             className={classNames(
-                                                item.current ? 'bg-gray-900' : 'navlinks hover:text-black',
+                                                link.current ? 'bg-gray-900' : 'navlinks hover:text-black',
                                                 'px-3 py-4 rounded-md text-lg font-normal'
                                             )}
-                                            aria-current={item.href ? 'page' : undefined}
+                                            aria-current={link.href ? 'page' : undefined}
                                         >
-                                            {item.name}
+                                            {link.name}
                                         </Link>
-                                    ))}
+                                    ))} */}
+                                    
                                 </div>
 
                             </div>

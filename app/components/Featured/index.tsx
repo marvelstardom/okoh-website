@@ -12,20 +12,20 @@ interface DataType {
 
 const postData: DataType[] = [
     {
-        heading: 'Brand design for a computer brand.',
-        imgSrc: '/images/featured/feat1.jpg',
+        heading: 'Logistics & Warehousing',
+        imgSrc: '/images/web_images/logistics2.jpg',
     },
     {
-        heading: 'Mobile app 3d wallpaper.',
-        imgSrc: '/images/featured/feat2.jpg',
+        heading: 'Installation Services',
+        imgSrc: '/images/web_images/cctv2.jpg',
     },
     {
-        heading: 'Brand design for a computer brand.',
-        imgSrc: '/images/featured/feat1.jpg',
+        heading: 'Procurement & Supply',
+        imgSrc: '/images/web_images/procure.jpg',
     },
     {
-        heading: 'Mobile app 3d wallpaper.',
-        imgSrc: '/images/featured/feat2.jpg',
+        heading: 'Consulting',
+        imgSrc: '/images/web_images/consultant.jpg',
     }
 ]
 
@@ -84,13 +84,13 @@ export default class MultipleItems extends Component {
 
 
         return (
-            <div className="bg-bgblue py-20 marginFeature bg-featured">
+            <div className="bg-bgblue pb-20 marginFeature bg-featured">
                 <div className='mx-auto max-w-7xl sm:py-4 lg:px-8 '>
 
-                    <div className="text-center pt-48 pb-10 md:pt-96">
-                        <h3 className="text-4xl sm:text-6xl font-bold text-white my-2">Featured works.</h3>
-                        <h3 className="text-4xl sm:text-6xl font-bold text-white text-opacity-50 lg:mr-48 my-2">Featured works.</h3>
-                        <h3 className="text-4xl sm:text-6xl font-bold text-white text-opacity-25 lg:-mr-32 my-2">Featured works.</h3>
+                    <div className="text-center pt-20 pb-10 md:pt-20">
+                        <h3 className="text-4xl sm:text-6xl font-bold text-white my-2">Our services.</h3>
+                        <h3 className="text-4xl sm:text-6xl font-bold text-white text-opacity-50 lg:mr-48 my-2">Our services.</h3>
+                        <h3 className="text-4xl sm:text-6xl font-bold text-white text-opacity-25 lg:-mr-32 my-2">Our services.</h3>
                     </div>
 
                     <Slider {...settings}>
